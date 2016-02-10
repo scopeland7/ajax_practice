@@ -1,5 +1,12 @@
-<h1>Here's your tasks and deadlines, punk</h1>
 
 <%= link_to 'New Task', new_task_path, remote: true %>
 
 <div id ="task-form" style="display:none;"></div>
+
+<h1>Here's your tasks and deadlines, punk</h1>
+
+<div id='tasks'>
+ <ul>
+ 	<%= render @tasks %>
+ </ul>
+</div>
