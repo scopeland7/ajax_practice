@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :all_tasks, only: [:index, :create, :update]
+  before_action :all_tasks, only: [:index, :create, :update, :destroy]
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
@@ -22,8 +22,9 @@ class TasksController < ApplicationController
     @task.update(task_params)
   end
 
-  
-
+  def destroy
+    @task.destroy
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
