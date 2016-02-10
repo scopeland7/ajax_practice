@@ -1,13 +1,22 @@
+<div class='row'>
+	
+	<div class='col-md-3'>	
+		<%= link_to new_task_path, remote: true do %>
+			<button class='btn btn-default'><span class='glyphicon glyphicon-plus'></span> Add Task </button>
+		<% end %>
 
-<%= link_to 'New Task', new_task_path, remote: true %>
+		<div id ="task-form" style="display:none;"></div>
+	</div>
 
-<div id ="task-form" style="display:none;"></div>
+	<div class='col-md-8'>
+		<h1>Here's your tasks and deadlines, punk</h1>
 
-<h1>Here's your tasks and deadlines, punk</h1>
-
-<div id='tasks'>
- <ul>
-  <%= render @tasks  %>
- </ul>
+		<div id='tasks'>
+		 <ul>
+		 	<div class='row'>
+		  	<%= render @tasks  %>
+		  </div>
+		 </ul>
+		</div>
+	</div>
 </div>
-
